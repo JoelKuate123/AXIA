@@ -27,18 +27,18 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
             <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.15em] text-[#2A4EFA]">L'expertise IA N°1 à Bruxelles</span>
           </div>
           
-          {/* Titre en deux lignes uniquement avec le nouveau dégradé mélangé (Bleu -> Menthe) */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading leading-[1.1] tracking-tight max-w-2xl mx-auto lg:mx-0">
+          {/* Titre aligné sur la taille des autres sections (4xl -> 5xl) */}
+          <h1 className="text-4xl md:text-5xl font-black font-heading leading-[1.1] tracking-tight max-w-4xl mx-auto lg:mx-0">
             <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#C1F4D8] bg-clip-text text-transparent block">
               Gagnez du temps avec l'IA
             </span>
             <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#C1F4D8] bg-clip-text text-transparent block">
-              en automatisant votre PME.
+              en automatisant votre organisation.
             </span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
-            Audit, Stratégie & Déploiement : Nous réconcilions les PME avec l'IA pour libérer votre temps. <span className="bg-[#C1F4D8] px-2 rounded-lg text-[#111A4D]">ROI immédiat.</span>
+            Audit, Stratégie & Déploiement : Nous réconcilions les organisations avec l'IA pour libérer votre temps. <span className="bg-[#C1F4D8] px-2 rounded-lg text-[#111A4D]">ROI immédiat.</span>
           </p>
           
           <div className="flex flex-col xs:flex-row justify-center lg:justify-start gap-3 pt-2">
