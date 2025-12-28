@@ -111,5 +111,13 @@
   <body class="mesh-bg">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    
+    <!-- Tally Widget Script (chargement asynchrone sécurisé) -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script>
+      window.TallyConfig = {
+        "dynamicHeight": true
+      };
+    </script>
   </body>
 </html>
