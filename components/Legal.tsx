@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { ViewType } from '../types';
 import { ArrowLeft } from 'lucide-react';
@@ -24,7 +25,8 @@ export const Legal: React.FC<LegalProps> = ({ view, setView }) => {
                 <h3 className="text-xl font-bold mb-3 text-[#111A4D]">1. Éditeur du site</h3>
                 <p>Le site internet Axia est édité par la société DH COMPANY, immatriculée à Bruxelles sous le numéro d'entreprise BE 0765.557.109.</p>
                 <p>Siège social : Bruxelles, Belgique.</p>
-                <p>Directeur de la publication : Joel P. Kuate.</p>
+                <p><strong>Fondateur : Kuate Joel Parfait</strong></p>
+                <p>Directeur de la publication : Kuate Joel Parfait.</p>
               </section>
               <section>
                 <h3 className="text-xl font-bold mb-3 text-[#111A4D]">2. Hébergement</h3>
