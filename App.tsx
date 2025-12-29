@@ -14,6 +14,7 @@ import { Chatbot } from './components/Chatbot';
 import { Legal } from './components/Legal';
 import { AuditPage } from './components/AuditPage';
 import { ServicesPage } from './components/ServicesPage';
+import { CookieBanner } from './components/CookieBanner';
 import { ViewType } from './types';
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
       
       <Footer setView={setCurrentView} />
       <Chatbot />
+      <CookieBanner />
     </div>
   );
 }
