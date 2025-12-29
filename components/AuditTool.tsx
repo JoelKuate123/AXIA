@@ -85,7 +85,7 @@ export const AuditTool: React.FC = () => {
             >
               {isLoading ? (
                 <span className="flex items-center gap-2">
-                  <Loader2 className="animate-spin w-4 h-4 md:w-5 md:h-5" /> Analyse en cours...
+                  <Loader2 className="animate-spin w-4 h-4 md:w-5 md:h-5" /> Analyse sur-mesure...
                 </span>
               ) : (
                 <span className="flex items-center justify-between w-full">

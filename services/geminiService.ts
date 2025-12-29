@@ -6,19 +6,27 @@ export const generateBusinessAudit = async (businessType: string, goal: string):
   try {
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const model = 'gemini-3-flash-preview';
+    
+    // Prompt plus direct et contraignant pour forcer la variation selon le 'goal'
     const prompt = `
-      Act as a senior Productivity & AI consultant for the agency Axia.
-      The client is a "${businessType}" looking to "${goal}".
+      Tu es l'expert senior en automatisation IA de l'agence AXIA. 
+      Ton client travaille dans le secteur suivant : "${businessType}".
+      Sa priorité absolue actuelle est : "${goal}".
       
-      Suggest 3 specific, high-impact AI/Automation implementations to help them save time and boost productivity immediately.
-      Avoid technical jargon. Focus on time regained and business efficiency.
+      TA MISSION :
+      Suggère 3 solutions d'IA ou d'automatisation CONCRÈTES et DIFFÉRENTES qui répondent DIRECTEMENT à l'objectif "${goal}" dans le contexte de "${businessType}".
       
-      IMPORTANT: The output MUST be in FRENCH.
+      RÈGLES STRICTES :
+      1. Les solutions doivent être personnalisées pour le métier de "${businessType}".
+      2. Le champ 'impact' doit être une métrique chiffrée crédible (ex: -70% de temps, +25% de conversion, etc.).
+      3. Pas de jargon technique complexe.
+      4. Tout le contenu doit être en FRANÇAIS.
       
-      Return the response in JSON format with a list of 3 items, each having:
-      - title: Short punchy title (max 5 words) in French focusing on the solution.
-      - description: 1-2 sentences explaining how it saves time in French.
-      - impact: A projected time saving or productivity metric (e.g. "Gagnez 5h/semaine", "Traitement 10x plus rapide") in French.
+      Format de sortie : JSON array de 3 objets.
+      Chaque objet doit avoir :
+      - title: Titre punchy (max 5 mots).
+      - description: Explication claire de comment ça aide à atteindre l'objectif "${goal}".
+      - impact: Métrique de succès.
     `;
 
     const response = await ai.models.generateContent({
@@ -47,21 +55,22 @@ export const generateBusinessAudit = async (businessType: string, goal: string):
     return JSON.parse(text) as AuditResult[];
   } catch (error) {
     console.error("Audit Generation Error:", error);
+    // Fallback intelligent en cas d'erreur API
     return [
       {
-        title: "Automatisation de la Facturation",
-        description: "Éliminez la saisie manuelle en extrayant les données de vos factures automatiquement vers votre logiciel comptable.",
-        impact: "Gagnez 4h par semaine"
+        title: "Automatisation Intelligente",
+        description: `Solution personnalisée pour aider votre entreprise de ${businessType} à ${goal}.`,
+        impact: "Gain de temps immédiat"
       },
       {
-        title: "Assistant Support 24/7",
-        description: "Répondez instantanément aux questions répétitives de vos clients sans intervention humaine.",
-        impact: "80% de tickets en moins"
+        title: "Optimisation des Flux",
+        description: "Analyse et réduction des tâches répétitives pour libérer votre équipe.",
+        impact: "Productivité +30%"
       },
       {
-        title: "Tri Intelligent des Emails",
-        description: "Catégorisez et priorisez vos emails entrants pour ne traiter que les urgences réelles.",
-        impact: "Productivité x2"
+        title: "Système IA Sur-mesure",
+        description: "Implémentation d'un agent dédié à la gestion de vos processus critiques.",
+        impact: "ROI garanti < 6 mois"
       }
     ];
   }
