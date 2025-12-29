@@ -12,10 +12,17 @@ declare global {
 
 export const Contact: React.FC = () => {
   useEffect(() => {
-    // Re-déclenche le chargement des embeds Tally quand le composant est monté
-    if (window.Tally) {
-      window.Tally.loadEmbeds();
-    }
+    // Fonction pour charger Tally de manière sécurisée
+    const loadTally = () => {
+      if (window.Tally) {
+        window.Tally.loadEmbeds();
+      } else {
+        // Si Tally n'est pas encore prêt, on réessaye un peu plus tard
+        setTimeout(loadTally, 500);
+      }
+    };
+
+    loadTally();
   }, []);
 
   return (
@@ -48,14 +55,13 @@ export const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-[3rem] p-4 md:p-8 border border-gray-100 shadow-2xl min-h-[550px] flex flex-col">
+        <div className="bg-white rounded-[3rem] p-4 md:p-8 border border-gray-100 shadow-2xl min-h-[550px] flex flex-col overflow-hidden">
           <h3 className="text-3xl font-black text-[#111A4D] mb-4 px-4 md:px-6 font-heading">Une question ?</h3>
           
-          <div className="flex-1 w-full overflow-hidden">
-            {/* Utilisation de l'iframe avec fallback src pour garantir l'affichage */}
+          <div className="flex-1 w-full min-h-[450px]">
+            {/* L'iframe utilise src directement pour éviter les problèmes de chargement asynchrone */}
             <iframe 
               src="https://tally.so/embed/44BZd5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              data-tally-src="https://tally.so/embed/44BZd5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
               loading="lazy" 
               width="100%" 
               height="450" 
@@ -63,7 +69,7 @@ export const Contact: React.FC = () => {
               marginHeight={0} 
               marginWidth={0} 
               title="Contact Form Axia"
-              className="w-full h-full min-h-[450px]"
+              className="w-full h-full border-none"
             ></iframe>
           </div>
           
