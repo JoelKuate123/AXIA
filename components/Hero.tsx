@@ -27,7 +27,6 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
             <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.15em] text-[#2A4EFA]">L'expertise IA N°1 à Bruxelles</span>
           </div>
           
-          {/* Titre légèrement réduit pour l'équilibre */}
           <h1 className="text-5xl md:text-7xl font-black font-heading leading-[1] tracking-tight max-w-4xl mx-auto lg:mx-0">
             <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#6366F1] bg-clip-text text-transparent block">
               Gagnez du temps
@@ -46,16 +45,16 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
           
           <div className="flex flex-col xs:flex-row justify-center lg:justify-start gap-4 pt-2">
             <Button 
-              className="text-base md:text-xl py-4 px-10 font-black flex gap-2 group shadow-xl"
+              className="text-sm md:text-lg py-3 px-8 font-black flex gap-2 group shadow-xl"
               onClick={() => window.open(BREVO_LINK, '_blank')}
             >
               Prendre RDV
-              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               variant="secondary" 
               onClick={() => setView('audit-dedicated')} 
-              className="text-base md:text-xl py-4 px-10 glass-card border-white/60 text-[#111A4D] font-black"
+              className="text-sm md:text-lg py-3 px-8 glass-card border-white/60 text-[#111A4D] font-black"
             >
               Scan Business
             </Button>

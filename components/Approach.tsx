@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Section } from './ui/Section';
 import { SectionId } from '../types';
@@ -82,7 +83,7 @@ export const Approach: React.FC = () => {
             </div>
         </div>
         <Button 
-            className="w-full lg:w-auto text-lg px-10 py-5 bg-[#111A4D] font-black whitespace-nowrap"
+            className="w-full lg:w-auto text-sm md:text-lg px-8 py-3 bg-[#111A4D] font-black whitespace-nowrap"
             onClick={() => window.open(BREVO_LINK, '_blank')}
         >
             Réserver mon audit gratuit

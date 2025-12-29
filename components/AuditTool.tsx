@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { generateBusinessAudit } from '../services/geminiService';
 import { Button } from './ui/Button';
@@ -79,17 +80,17 @@ export const AuditTool: React.FC = () => {
 
             <Button 
               type="submit" 
-              className="w-full py-4 md:py-5 text-sm md:text-xl font-black group shadow-blue-500/30 whitespace-nowrap"
+              className="w-full py-3 md:py-4 text-sm md:text-lg font-black group shadow-blue-500/30 whitespace-nowrap"
               disabled={isLoading}
             >
               {isLoading ? (
                 <span className="flex items-center gap-2">
-                  <Loader2 className="animate-spin w-4 h-4 md:w-6 md:h-6" /> Analyse en cours...
+                  <Loader2 className="animate-spin w-4 h-4 md:w-5 md:h-5" /> Analyse en cours...
                 </span>
               ) : (
                 <span className="flex items-center justify-between w-full">
                   Lancer le Scan IA
-                  <Sparkles className="w-4 h-4 md:w-6 md:h-6 transition-transform group-hover:scale-125" />
+                  <Sparkles className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-125" />
                 </span>
               )}
             </Button>
@@ -97,7 +98,6 @@ export const AuditTool: React.FC = () => {
         ) : (
           <div className="animate-fadeIn">
             <div className="flex justify-between items-center mb-6 md:mb-10">
-                {/* Titre de résultat ajusté selon capture écran */}
                 <h4 className="text-xl md:text-3xl font-black text-[#111A4D] font-heading leading-tight">
                   Gisements pour votre <br/><span className="text-[#2A4EFA] capitalize">{industry}</span>
                 </h4>
@@ -123,10 +123,10 @@ export const AuditTool: React.FC = () => {
             <div className="mt-8 md:mt-12 pt-6 md:pt-10 border-t border-gray-100 text-center flex flex-col gap-4">
               <p className="text-xs md:text-sm text-gray-400 font-bold">Voulez-vous implémenter ces solutions ?</p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={() => setResults(null)} variant="outline" className="flex-1 text-xs md:text-sm py-3 whitespace-nowrap">
+                <Button onClick={() => setResults(null)} variant="outline" className="flex-1 text-xs md:text-sm py-2 whitespace-nowrap">
                   Nouvelle analyse
                 </Button>
-                <Button onClick={() => window.open('https://meet.brevo.com/joelparfaitkuate/echanger-dun-projet', '_blank')} className="flex-1 text-xs md:text-sm py-3 whitespace-nowrap">
+                <Button onClick={() => window.open('https://meet.brevo.com/joelparfaitkuate/echanger-dun-projet', '_blank')} className="flex-1 text-xs md:text-sm py-2 whitespace-nowrap">
                   En discuter
                 </Button>
               </div>

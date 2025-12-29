@@ -64,7 +64,7 @@ export const Navigation: React.FC<NavigationProps> = ({ setView, currentView }) 
           </span>
         </div>
 
-        {/* Desktop Nav - Font size increased from text-xs to text-sm */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <button
@@ -77,7 +77,7 @@ export const Navigation: React.FC<NavigationProps> = ({ setView, currentView }) 
           ))}
           <Button 
             variant="primary" 
-            className="py-2.5 px-6 text-sm"
+            className="py-2 px-5 text-sm"
             onClick={() => window.open('https://meet.brevo.com/joelparfaitkuate/echanger-dun-projet', '_blank')}
           >
             Parlons IA
@@ -107,7 +107,7 @@ export const Navigation: React.FC<NavigationProps> = ({ setView, currentView }) 
           ))}
           <Button 
             variant="primary" 
-            className="w-full py-4 text-base"
+            className="w-full py-3 text-base"
             onClick={() => window.open('https://meet.brevo.com/joelparfaitkuate/echanger-dun-projet', '_blank')}
           >
             Parlons IA
