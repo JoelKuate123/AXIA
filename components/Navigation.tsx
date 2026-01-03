@@ -70,7 +70,7 @@ export const Navigation: React.FC<NavigationProps> = ({ setView, currentView }) 
             <button
               key={link.label}
               onClick={() => handleNavClick(link.id as any)}
-              className="text-[#111A4D] hover:text-[#2A4EFA] font-bold text-sm transition-colors uppercase tracking-widest"
+              className="text-[#111A4D] hover:text-[#2A4EFA] font-semibold text-sm transition-colors uppercase tracking-widest"
             >
               {link.label}
             </button>
@@ -100,7 +100,7 @@ export const Navigation: React.FC<NavigationProps> = ({ setView, currentView }) 
             <button
               key={link.label}
               onClick={() => handleNavClick(link.id as any)}
-              className="text-left text-[#111A4D] font-black text-lg uppercase tracking-widest border-b border-gray-50 pb-3"
+              className="text-left text-[#111A4D] font-bold text-lg uppercase tracking-widest border-b border-gray-50 pb-3"
             >
               {link.label}
             </button>

@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
         </div>
         
         <div>
-          <h4 className="font-bold text-xl mb-8 text-[#C1F4D8]">Navigation</h4>
+          <h4 className="font-semibold text-xl mb-8 text-[#C1F4D8]">Navigation</h4>
           <ul className="space-y-4 text-blue-100/70 font-medium">
             <li><button onClick={() => scrollTo(SectionId.Home)} className="hover:text-white transition-colors">Accueil</button></li>
             <li><button onClick={() => scrollTo(SectionId.About)} className="hover:text-white transition-colors">À propos</button></li>
@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
         </div>
 
         <div>
-          <h4 className="font-bold text-xl mb-8 text-[#C1F4D8]">Légal</h4>
+          <h4 className="font-semibold text-xl mb-8 text-[#C1F4D8]">Légal</h4>
           <ul className="space-y-4 text-blue-100/70 font-medium">
             <li><button onClick={() => setView('mentions-legales')} className="hover:text-white transition-colors">Mentions Légales</button></li>
             <li><button onClick={() => setView('confidentialite')} className="hover:text-white transition-colors">Confidentialité</button></li>
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
         </div>
         
         <div>
-          <h4 className="font-bold text-xl mb-8 text-[#C1F4D8]">Contact</h4>
+          <h4 className="font-semibold text-xl mb-8 text-[#C1F4D8]">Contact</h4>
           <ul className="space-y-6 text-blue-100/70">
             <li className="flex gap-3"><Mail className="w-5 h-5 text-[#2A4EFA]" /><span>hello@dhcompany.pro</span></li>
             <li className="flex gap-3"><Phone className="w-5 h-5 text-[#2A4EFA]" /><span>+32 465 55 71 09</span></li>

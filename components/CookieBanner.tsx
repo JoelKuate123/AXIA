@@ -40,7 +40,7 @@ export const CookieBanner: React.FC = () => {
           </div>
           <div className="flex-1">
             <div className="flex justify-between items-center mb-2">
-              <h4 className="text-[#111A4D] font-black font-heading text-lg">Respect de la vie privée</h4>
+              <h4 className="text-[#111A4D] font-bold font-heading text-lg">Respect de la vie privée</h4>
               <button onClick={() => setIsVisible(false)} className="text-gray-400 hover:text-[#111A4D] transition-colors">
                 <X className="w-5 h-5" />
               </button>
@@ -51,14 +51,14 @@ export const CookieBanner: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <Button 
                 onClick={handleAccept} 
-                className="flex-1 py-3 text-xs md:text-sm font-black whitespace-nowrap"
+                className="flex-1 py-3 text-xs md:text-sm font-bold whitespace-nowrap"
               >
                 Tout accepter
               </Button>
               <Button 
                 onClick={handleDecline} 
                 variant="secondary" 
-                className="flex-1 py-3 text-xs md:text-sm font-black border-gray-100 whitespace-nowrap"
+                className="flex-1 py-3 text-xs md:text-sm font-bold border-gray-100 whitespace-nowrap"
               >
                 Refuser
               </Button>

@@ -48,8 +48,8 @@ export const Approach: React.FC = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl -z-10" />
       
       <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 md:mb-20 relative z-10">
-        <span className="text-[#2A4EFA] font-black uppercase tracking-[0.2em] text-xs mb-4">Méthodologie</span>
-        <h2 className="text-4xl md:text-5xl font-black font-heading leading-tight mb-6">
+        <span className="text-[#2A4EFA] font-bold uppercase tracking-[0.2em] text-xs mb-4">Méthodologie</span>
+        <h2 className="text-4xl md:text-5xl font-bold font-heading leading-tight mb-6">
           <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#6366F1] bg-clip-text text-transparent">
             L'IA sans mal de tête.
           </span>
@@ -67,7 +67,7 @@ export const Approach: React.FC = () => {
             <div className="mb-6 bg-white w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
               {step.icon}
             </div>
-            <h3 className="text-xl md:text-2xl font-black text-[#111A4D] mb-4 font-heading">{step.title}</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-[#111A4D] mb-4 font-heading">{step.title}</h3>
             <p className="text-gray-600 leading-relaxed font-medium text-sm md:text-base">{step.desc}</p>
           </div>
         ))}
@@ -78,12 +78,12 @@ export const Approach: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="bg-[#C1F4D8] p-4 md:p-5 rounded-full shadow-lg animate-bounce"><Briefcase className="w-8 h-8 text-[#111A4D]" /></div>
             <div className="text-center md:text-left">
-                <h4 className="font-black text-xl md:text-2xl text-[#111A4D] mb-2">Accélérez votre croissance</h4>
+                <h4 className="font-bold text-xl md:text-2xl text-[#111A4D] mb-2">Accélérez votre croissance</h4>
                 <p className="text-base md:text-lg text-gray-500 font-medium max-w-md leading-relaxed">Nous transformons vos idées en systèmes automatisés performants. Profitez d'un partenaire IA à vos côtés.</p>
             </div>
         </div>
         <Button 
-            className="w-full lg:w-auto text-sm md:text-lg px-8 py-3 bg-[#111A4D] font-black whitespace-nowrap"
+            className="w-full lg:w-auto text-sm md:text-lg px-8 py-3 bg-[#111A4D] font-bold whitespace-nowrap"
             onClick={() => window.open(BREVO_LINK, '_blank')}
         >
             Réserver mon audit gratuit

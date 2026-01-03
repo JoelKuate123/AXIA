@@ -13,8 +13,8 @@ export const Button: React.FC<ButtonProps> = ({
   children, 
   ...props 
 }) => {
-  // Réduction significative du padding pour un look plus proportionné
-  const baseStyles = "inline-flex items-center justify-center px-4 py-1.5 rounded-full font-bold text-sm md:text-base transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2";
+  // Réduction de la graisse de police de bold à semibold
+  const baseStyles = "inline-flex items-center justify-center px-4 py-1.5 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
     primary: "bg-[#2A4EFA] text-white hover:bg-[#111A4D] focus:ring-[#2A4EFA] shadow-[0_4px_10px_0_rgba(42,78,250,0.25)]",

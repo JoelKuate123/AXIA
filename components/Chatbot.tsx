@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Loader2, Sparkles, User, Bot } from 'lucide-react';
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
@@ -118,7 +119,7 @@ export const Chatbot: React.FC = () => {
               <Sparkles className="w-5 h-5 text-[#C1F4D8]" />
             </div>
             <div>
-              <h3 className="font-bold text-white text-lg">Axia Assistant</h3>
+              <h3 className="font-semibold text-white text-lg">Axia Assistant</h3>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 bg-[#C1F4D8] rounded-full animate-pulse"></span>
                 <span className="text-blue-200 text-xs">Expert Productivité</span>
@@ -150,7 +151,7 @@ export const Chatbot: React.FC = () => {
                       href={BREVO_LINK} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="mt-3 block bg-[#C1F4D8] text-[#111A4D] font-bold py-2 px-3 rounded-lg text-center hover:bg-[#A3E8C1] transition-colors"
+                      className="mt-3 block bg-[#C1F4D8] text-[#111A4D] font-semibold py-2 px-3 rounded-lg text-center hover:bg-[#A3E8C1] transition-colors"
                     >
                       Prendre RDV
                     </a>

@@ -31,10 +31,10 @@ export const AuditTool: React.FC = () => {
             <Zap className="w-5 h-5 md:w-8 md:h-8 text-white fill-white" />
           </div>
           <div>
-            <h3 className="text-xl md:text-3xl font-black text-[#111A4D] font-heading leading-none mb-1 md:mb-2">
+            <h3 className="text-xl md:text-3xl font-bold text-[#111A4D] font-heading leading-none mb-1 md:mb-2">
               Axia Al Scan<span className="text-[#2A4EFA]">™</span>
             </h3>
-            <p className="text-gray-400 font-bold uppercase text-[8px] md:text-[10px] tracking-[0.2em]">Diagnostic de Performance</p>
+            <p className="text-gray-400 font-semibold uppercase text-[8px] md:text-[10px] tracking-[0.2em]">Diagnostic de Performance</p>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ export const AuditTool: React.FC = () => {
             
             <div className="space-y-4 md:space-y-6">
               <div className="group">
-                <label className="block text-[10px] md:text-sm font-black text-[#111A4D] uppercase tracking-widest mb-2 transition-colors group-focus-within:text-[#2A4EFA]">Votre Secteur</label>
+                <label className="block text-[10px] md:text-sm font-bold text-[#111A4D] uppercase tracking-widest mb-2 transition-colors group-focus-within:text-[#2A4EFA]">Votre Secteur</label>
                 <input
                   type="text"
                   value={industry}
@@ -57,7 +57,7 @@ export const AuditTool: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block text-[10px] md:text-sm font-black text-[#111A4D] uppercase tracking-widest mb-2">Votre Priorité</label>
+                <label className="block text-[10px] md:text-sm font-bold text-[#111A4D] uppercase tracking-widest mb-2">Votre Priorité</label>
                 <div className="relative">
                   <select
                     value={goal}
@@ -80,7 +80,7 @@ export const AuditTool: React.FC = () => {
 
             <Button 
               type="submit" 
-              className="w-full py-3 md:py-4 text-sm md:text-lg font-black group shadow-blue-500/30 whitespace-nowrap"
+              className="w-full py-3 md:py-4 text-sm md:text-lg font-bold group shadow-blue-500/30 whitespace-nowrap"
               disabled={isLoading}
             >
               {isLoading ? (
@@ -98,7 +98,7 @@ export const AuditTool: React.FC = () => {
         ) : (
           <div className="animate-fadeIn">
             <div className="flex justify-between items-center mb-6 md:mb-10">
-                <h4 className="text-xl md:text-3xl font-black text-[#111A4D] font-heading leading-tight">
+                <h4 className="text-xl md:text-3xl font-bold text-[#111A4D] font-heading leading-tight">
                   Gisements pour votre <br/><span className="text-[#2A4EFA] capitalize">{industry}</span>
                 </h4>
                 <div className="bg-[#C1F4D8] p-2 md:p-3 rounded-xl md:rounded-2xl text-[#111A4D] flex-shrink-0 shadow-sm border border-white">
@@ -110,8 +110,8 @@ export const AuditTool: React.FC = () => {
               {results.map((item, idx) => (
                 <div key={idx} className="group glass-card p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white hover:border-[#2A4EFA]/20 transition-all duration-300 shadow-sm hover:shadow-xl">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <h5 className="font-black text-[#111A4D] text-sm md:text-lg leading-tight group-hover:text-[#2A4EFA] transition-colors">{item.title}</h5>
-                    <span className="bg-[#2A4EFA] text-white text-[7px] md:text-[10px] font-black px-2 py-1 rounded-lg uppercase tracking-widest whitespace-normal sm:whitespace-nowrap text-center self-start sm:self-auto min-w-[80px]">
+                    <h5 className="font-bold text-[#111A4D] text-sm md:text-lg leading-tight group-hover:text-[#2A4EFA] transition-colors">{item.title}</h5>
+                    <span className="bg-[#2A4EFA] text-white text-[7px] md:text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-widest whitespace-normal sm:whitespace-nowrap text-center self-start sm:self-auto min-w-[80px]">
                       {item.impact}
                     </span>
                   </div>
@@ -121,7 +121,7 @@ export const AuditTool: React.FC = () => {
             </div>
 
             <div className="mt-8 md:mt-12 pt-6 md:pt-10 border-t border-gray-100 text-center flex flex-col gap-4">
-              <p className="text-xs md:text-sm text-gray-400 font-bold">Voulez-vous implémenter ces solutions ?</p>
+              <p className="text-xs md:text-sm text-gray-400 font-semibold">Voulez-vous implémenter ces solutions ?</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button onClick={() => setResults(null)} variant="outline" className="flex-1 text-xs md:text-sm py-2 whitespace-nowrap">
                   Nouvelle analyse

@@ -24,10 +24,10 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-5 py-2.5 rounded-full shadow-[0_4px_20px_-5px_rgba(42,78,250,0.2)] border border-[#2A4EFA]/10 mx-auto lg:mx-0">
             <Sparkle className="w-3.5 h-3.5 text-[#2A4EFA] animate-spin-slow" />
-            <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.15em] text-[#2A4EFA]">L'expertise IA N°1 à Bruxelles</span>
+            <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] text-[#2A4EFA]">L'expertise IA N°1 à Bruxelles</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black font-heading leading-[1] tracking-tight max-w-4xl mx-auto lg:mx-0">
+          <h1 className="text-5xl md:text-7xl font-bold font-heading leading-[1] tracking-tight max-w-4xl mx-auto lg:mx-0">
             <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#6366F1] bg-clip-text text-transparent block">
               Gagnez du temps
             </span>
@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
           
           <div className="flex flex-col xs:flex-row justify-center lg:justify-start gap-4 pt-2">
             <Button 
-              className="text-sm md:text-lg py-3 px-8 font-black flex gap-2 group shadow-xl"
+              className="text-sm md:text-lg py-3 px-8 font-bold flex gap-2 group shadow-xl"
               onClick={() => window.open(BREVO_LINK, '_blank')}
             >
               Prendre RDV
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
             <Button 
               variant="secondary" 
               onClick={() => setView('audit-dedicated')} 
-              className="text-sm md:text-lg py-3 px-8 glass-card border-white/60 text-[#111A4D] font-black"
+              className="text-sm md:text-lg py-3 px-8 glass-card border-white/60 text-[#111A4D] font-bold"
             >
               Scan Business
             </Button>
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
               <div className="flex items-center gap-1 mb-0.5">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-3.5 h-3.5 text-[#FFB800] fill-[#FFB800]" />)}
               </div>
-              <span className="text-[12px] md:text-base font-bold text-[#111A4D]/60 tracking-tight">Accompagnement de 200+ PME</span>
+              <span className="text-[12px] md:text-base font-semibold text-[#111A4D]/60 tracking-tight">Accompagnement de 200+ PME</span>
             </div>
           </div>
         </div>

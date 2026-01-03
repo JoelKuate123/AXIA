@@ -68,11 +68,11 @@ export const Services: React.FC<ServicesProps> = ({ setView }) => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full filter blur-[100px] -z-10" />
       
       <div className="flex flex-col items-center text-center mb-10 md:mb-16 relative z-10">
-        <div className="flex items-center gap-2 text-[#2A4EFA] font-black tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4">
+        <div className="flex items-center gap-2 text-[#2A4EFA] font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4">
           <Zap className="w-3 h-3 md:w-4 md:h-4 fill-[#2A4EFA]" />
           Expertises 360°
         </div>
-        <h2 className="text-3xl md:text-5xl font-black font-heading leading-tight">
+        <h2 className="text-3xl md:text-5xl font-bold font-heading leading-tight">
           <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#6366F1] bg-clip-text text-transparent">
             Une efficacité augmentée.
           </span>
@@ -85,18 +85,18 @@ export const Services: React.FC<ServicesProps> = ({ setView }) => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#2A4EFA]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-1000" />
             <div className="flex justify-between items-start mb-6 md:mb-8">
                 <div className="p-3 rounded-xl bg-white shadow-sm border border-gray-50 w-fit group-hover:rotate-12 transition-transform">{s.icon}</div>
-                <span className={`px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest bg-gray-100 text-[#111A4D]`}>{s.badge}</span>
+                <span className={`px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-widest bg-gray-100 text-[#111A4D]`}>{s.badge}</span>
             </div>
-            <h3 className="text-lg md:text-xl font-black mb-2 md:mb-3 font-heading leading-tight text-[#111A4D]">{s.title}</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 font-heading leading-tight text-[#111A4D]">{s.title}</h3>
             <p className="mb-6 text-sm leading-relaxed font-medium text-gray-500">{s.desc}</p>
-            <button onClick={() => setView('services-detail')} className="flex items-center gap-2 font-black mt-auto text-[10px] uppercase tracking-widest text-[#2A4EFA] group/btn transition-all hover:gap-3">En savoir plus<ArrowRight className="w-4 h-4 transition-transform" /></button>
+            <button onClick={() => setView('services-detail')} className="flex items-center gap-2 font-bold mt-auto text-[10px] uppercase tracking-widest text-[#2A4EFA] group/btn transition-all hover:gap-3">En savoir plus<ArrowRight className="w-4 h-4 transition-transform" /></button>
           </div>
         ))}
       </div>
       
       <div className="mt-12 md:mt-16 text-center relative z-10">
         <Button 
-            className="px-8 py-3.5 text-base md:text-lg font-black shadow-blue-500/20 whitespace-nowrap"
+            className="px-8 py-3.5 text-base md:text-lg font-bold shadow-blue-500/20 whitespace-nowrap"
             onClick={() => window.open(BREVO_LINK, '_blank')}
         >
             Discuter de mon projet

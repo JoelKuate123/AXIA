@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Section } from './ui/Section';
 import { SectionId } from '../types';
@@ -30,7 +31,7 @@ export const FAQ: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex p-3 rounded-2xl bg-[#E0E7FF] text-[#2A4EFA] mb-4"><HelpCircle className="w-8 h-8" /></div>
-          <h2 className="text-4xl md:text-5xl font-black font-heading leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold font-heading leading-tight">
             <span className="bg-gradient-to-r from-[#111A4D] via-[#2A4EFA] to-[#6366F1] bg-clip-text text-transparent">
               Questions Fréquentes
             </span>
@@ -42,7 +43,7 @@ export const FAQ: React.FC = () => {
           {faqs.map((faq, idx) => (
             <div key={idx} className="bg-white rounded-[2rem] border border-gray-100 overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md">
               <button onClick={() => setOpenIndex(openIndex === idx ? null : idx)} className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
-                <span className="font-black text-xl text-[#111A4D] pr-4">{faq.question}</span>
+                <span className="font-bold text-xl text-[#111A4D] pr-4">{faq.question}</span>
                 {openIndex === idx ? <ChevronUp className="text-[#2A4EFA]" /> : <ChevronDown className="text-gray-400" />}
               </button>
               {openIndex === idx && (
